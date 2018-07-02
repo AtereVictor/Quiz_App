@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:elevation="10dp"
+        android:background="@drawable/card_background"
+        android:layout_margin="16dp"
+        android:padding="25dp">
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/result"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:background="@drawable/secondblue_card"
+            android:textColor="@android:color/white"
+            />
+        <TextView
+            android:id="@+id/res"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Score is: "
+            android:layout_below="@+id/result"
+            android:textSize="35sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:fontFamily="cursive"
+            android:layout_marginBottom="16dp"/>
+         <TextView
+             android:id="@+id/review_description"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="@string/review_description"
+             android:layout_below="@+id/res"
+             android:layout_marginBottom="16dp"
+             />
+        <TextView
+            android:id="@+id/answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/review_description"
+            android:layout_marginBottom="16dp"
+            />
+        <Button
+            android:id="@+id/review_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/review_button"
+            android:layout_below="@+id/answer"
+            android:background="@drawable/blue_card"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+           android:onClick="onReview"
+            />
+
+    </RelativeLayout>
+</LinearLayout>
