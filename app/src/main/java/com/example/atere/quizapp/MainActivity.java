@@ -3,6 +3,7 @@ package com.example.atere.quizapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         RadioButton a3 = (RadioButton)findViewById(R.id.a3);
         RadioButton b4 = (RadioButton)findViewById(R.id.b4);
         RadioButton a5 = (RadioButton)findViewById(R.id.a5);
-        RadioButton b6 =  findViewById(R.id.b6);
+        RadioButton b6 = (RadioButton)findViewById(R.id.b6);
 
         //Conditional statements to update the variable score
         if (b1.isChecked()) score++;
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         double percentage = (score/6)*100;
         String result = String.valueOf(score)+"%";
         setContentView(R.layout.result);
-        TextView res =  findViewById(R.id.res);
+        TextView res = (TextView) findViewById(R.id.res);
         //Initializing the variable performance to give a brief description of the performance of the user in words
         String performance ="Good Job!\n";
         //Conditional statements to update the performance variable based onthe performance of the user
@@ -103,7 +104,10 @@ public class MainActivity extends AppCompatActivity {
         String answer6=getString(R.string.b6);
         String answer=answer1+answer2+answer3+answer4+answer5+answer6;
         //Setting the text of the answer  text view to the concatenation of all the answers
-        TextView answerView =  findViewById(R.id.answer);
+        TextView answerView = (TextView) findViewById(R.id.answer);
         answerView.setText(answer);
+        //Setting the visibility of the button to gone
+        Button reviewButton =(Button) findViewById(R.id.review_button);
+        reviewButton.setVisibility(View.GONE);
     }
 }
